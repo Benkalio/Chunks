@@ -5,6 +5,9 @@
     <title></title>
   </head>
   <body>
+
+    {{> menu}}
+
     <h1>Users</h1>
 
     <ul>
@@ -13,7 +16,12 @@
         <li>
           {{name}} and the age is {{age}}
         </li>
-        
+
+      {{/users}}
+
+      <!-- Conditional statement - if users don't exist -->
+      {{^users}}
+        <h2>No user exists!</h2>
       {{/users}}
     </ul>
 
